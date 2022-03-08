@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./components/styles/App.css"
+import PostItem from "./components/PostItem";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <div className="App">
+            <PostItem post={{id: 1, title: "Javascript", body: "description"}}/>
+            <PostItem post={{id: 2, title: "Javascript", body: "description"}}/>
+            <PostItem post={{id: 3, title: "Javascript", body: "description"}}/>
+            <PostItem post={{id: 4, title: "Javascript", body: "description"}}/>
+            <PostItem post={{id: 5, title: "Javascript", body: "description"}}/>
+
+        </div>
+    );
 }
 
 export default App;
