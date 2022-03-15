@@ -4,14 +4,11 @@ import {PostType} from "./PostList";
 
 interface PostItemPropsType {
     number: number
-
     remove(post: PostType): void
-
     post: {
         id: number
         title: string
         body: string
-
     }
 }
 
