@@ -22,6 +22,7 @@ const PostList = ({posts, title, remove}: PostListPropsType) => {
     return (
         <div>
             <h1 style={{textAlign: "center"}}>{title}</h1>
+
             {posts.map((posts, index) =>
                 <PostItem number={index + 1} key={posts.id} post={posts} remove={remove}/>
             )}
