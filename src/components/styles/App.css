@@ -33,3 +33,16 @@
     transform: translateX(-350px);
     transition: all 500ms ease-in;
 }
+.page__wrapper {
+    margin-top: 30px;
+    display: flex;
+}
+.page {
+    padding: 10px;
+    border: teal 1px solid;
+    cursor: pointer;
+}
+.page__current {
+    font-weight: bold;
+    border: orange 2px solid;
+}
