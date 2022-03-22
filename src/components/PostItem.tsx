@@ -1,12 +1,11 @@
 import React from 'react';
 import MyButton from "./UI/button/MyButton";
 import {PostType} from "./PostList";
+import {useNavigate} from "react-router-dom"
 
 interface PostItemPropsType {
     number: number
-
     remove(post: PostType): void
-
     post: {
         id: number
         title: string
@@ -16,6 +15,7 @@ interface PostItemPropsType {
 
 const PostItem = (props: PostItemPropsType) => {
     const deletePost = () => props.remove(props.post)
+    const router = useNavigate()
     return (
         <div>
             <div className={"post"}>
@@ -26,6 +26,7 @@ const PostItem = (props: PostItemPropsType) => {
                     </div>
                 </div>
                 <div className="post__btns">
+                    <MyButton onClick={() => router(`/posts/${props.post.id}`)}>Открыть</MyButton>
                     <MyButton onClick={deletePost}>Удалить</MyButton>
                 </div>
             </div>

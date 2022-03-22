@@ -9,7 +9,7 @@ import MyButton from '../components/UI/button/MyButton';
 import {usePost} from "../hooks/usePosts";
 import {getPageCount} from "../utils/pages";
 import PostService from "../API/PostService";
-import {UseFetching} from "../hooks/useFetching";
+import {useFetching} from "../hooks/useFetching";
 import Loader from "../components/UI/Loader/Loader";
 
 
@@ -21,7 +21,7 @@ function Posts() {
     const [totalPages, setTotalPages] = useState(0)
     const [limit, setLimit] = useState(10)
     const [page, setPage] = useState(1)
-    const [fetchPosts, isPostLoading, postError] = UseFetching(async (limit: number, page: number) => {
+    const [fetchPosts, isPostLoading, postError] = useFetching(async (limit: number, page: number) => {
         const response: any = await PostService.getAll(limit, page)
         setPosts(response.data)
         const totalCount = response.headers["x-total-count"]
