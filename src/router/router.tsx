@@ -1,8 +1,6 @@
 import About from "../pages/About";
-
 import Posts from "../pages/Posts";
 import Login from "../pages/Login";
-// @ts-ignore
 import PostIdPage from '../pages/PostIdPage';
 
 export const privateRoutes = [

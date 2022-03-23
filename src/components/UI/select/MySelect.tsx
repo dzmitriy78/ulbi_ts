@@ -3,7 +3,7 @@ import React from 'react';
 interface MySelectPropsType {
     options: Array<any>
     defaultValue:string
-    value:string
+    value:string | number
     onChange(value: string):void
 }
 
